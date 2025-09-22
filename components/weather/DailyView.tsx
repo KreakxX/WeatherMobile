@@ -1,5 +1,5 @@
 import { JSX } from "react";
-import { Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
@@ -141,56 +141,46 @@ export default function DailyView() {
   const weather_icons = new Map<string, JSX.Element>();
   weather_icons.set(
     "Sonne",
-    <MaterialCommunityIcons
-      className="mt-3 ml-2"
-      size={24}
-      color={"white"}
-      name="weather-sunny"
-    ></MaterialCommunityIcons>
+    <Image
+      className="mt-3 ml-2 w-10 h-10"
+      source={require("../../assets/images/clear-day.png")}
+    ></Image>
   );
   weather_icons.set(
     "Bewölkt",
-    <MaterialCommunityIcons
-      className="mt-3 ml-2"
-      size={24}
-      color={"white"}
-      name="weather-cloudy"
-    ></MaterialCommunityIcons>
+    <Image
+      className="mt-3 ml-2 w-10 h-10"
+      source={require("../../assets/images/pcloudy-day.png")}
+    ></Image>
   );
   weather_icons.set(
     "Nebel",
-    <MaterialCommunityIcons
-      className="mt-3 ml-2"
-      size={24}
-      color={"white"}
-      name="weather-fog"
-    ></MaterialCommunityIcons>
+    <Image
+      className="mt-3 ml-2 w-10 h-10"
+      source={require("../../assets/images/fog-day.png")}
+    ></Image>
   );
   weather_icons.set(
     "Regen",
-    <MaterialCommunityIcons
-      className="mt-3 ml-2"
-      size={24}
-      color={"white"}
-      name="weather-pouring"
-    ></MaterialCommunityIcons>
+    <Image
+      className="mt-3 ml-2 w-10 h-10"
+      source={require("../../assets/images/showers-day.png")}
+    ></Image>
   );
   weather_icons.set(
     "Gewitter",
-    <MaterialCommunityIcons
-      className="mt-3 ml-2"
-      size={24}
-      color={"white"}
-      name="weather-lightning"
-    ></MaterialCommunityIcons>
+    <Image
+      className="mt-3 ml-2 w-10 h-10"
+      source={require("../../assets/images/tshower-day.png")}
+    ></Image>
   );
 
   return (
-    <View className="mt-10  rounded-3xl mx-5 bg-[#5B98A8]/80 px-10 py-10">
+    <View className="mt-10  rounded-3xl mx-5 bg-[#5B98A8]/80 px-10 py-10 ">
       <Text className="text-white text-xl font-bold ">
         Regen. Tiefsttemperatur 10C.
       </Text>
-      <View className="w-full border-t border-t-gray-300 mt-5 mb-5"></View>
+      <View className="w-full border-t border-t-gray-400 mt-5 mb-5"></View>
       <FlatList
         data={filteredDailyForecast}
         horizontal

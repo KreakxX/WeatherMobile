@@ -1,4 +1,5 @@
 import DailyView from "@/components/weather/DailyView";
+import RainView from "@/components/weather/RainView";
 import StartView from "@/components/weather/StartView";
 import { LinearGradient } from "expo-linear-gradient";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
@@ -16,6 +17,7 @@ export default function HomeScreen() {
       <GestureHandlerRootView>
         <DailyView />
       </GestureHandlerRootView>
+      <RainView />
     </LinearGradient>
   );
 }
