@@ -1,21 +1,21 @@
-import { Text, View } from "react-native";
+import DailyView from "@/components/weather/DailyView";
+import StartView from "@/components/weather/StartView";
+import { LinearGradient } from "expo-linear-gradient";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import "../global.css";
-
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 export default function HomeScreen() {
   return (
-    <View className="flex-1 bg-cyan-600 ">
-      <View className="mt-20">
-        <View className="flex flex-row gap-5 justify-start ml-10 ">
-          <MaterialCommunityIcons
-            name="map-marker-outline"
-            size={30}
-            color="white"
-          />
-          <Text className="text-3xl font-bold text-white">Biesdorf</Text>
-        </View>
-      </View>
-    </View>
+    <LinearGradient
+      colors={["#7CB7B7", "#5B98A8"]}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 0, y: 1 }}
+      className="w-full h-full"
+    >
+      <StartView />
+      <GestureHandlerRootView>
+        <DailyView />
+      </GestureHandlerRootView>
+    </LinearGradient>
   );
 }
