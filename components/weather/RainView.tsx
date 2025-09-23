@@ -43,7 +43,7 @@ export default function RainView() {
   };
 
   return (
-    <View className="mt-10  rounded-3xl mx-5 bg-[#5B98A8]/80 px-10 py-10">
+    <View className="rounded-3xl mx-5 bg-[#5B98A8] px-10 py-10">
       <BarChart
         data={data}
         width={screenWidth}

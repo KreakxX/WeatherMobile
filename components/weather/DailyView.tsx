@@ -176,7 +176,7 @@ export default function DailyView() {
   );
 
   return (
-    <View className="mt-10  rounded-3xl mx-5 bg-[#5B98A8]/80 px-10 py-10 ">
+    <View className="mt-10  rounded-3xl mx-5 bg-[#5B98A8] px-10 py-10 ">
       <Text className="text-white text-xl font-bold ">
         Regen. Tiefsttemperatur 10C.
       </Text>
